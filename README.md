@@ -41,14 +41,14 @@ If a [REST API][wiki-REST-API] is not required, I would recommend to use Colab i
       - to use a GPU, you will need to install PyTorch, then run the app locally,
     - using Flask: [`matsui528/sis`][flask-app]
       - caveat: a priori no GPU for the same reason as with Streamlit,
-      - to use a GPU, you will need to install Tensforlow 2, then run the app locally,
+      - to use a GPU, you will need to install Tensorflow 2, then run the app locally,
     - using Node.js: [`rom1504/image_embeddings`][nodejs-app]
       - caveat:
         - embedding has to be pre-computed and downloaded by the user,
         - the user won't be able to compute the embedding for any image query on the fly,
-     - trivia:
-       - 4.88 MB .npy for 1000 vectors of dimension 1280,
-       - potentially up to 60 MB .npy for 30k vectors of dimension 512.
+      - trivia:
+        - 4.88 MB .npy for 1000 vectors of dimension 1280,
+        - potentially up to 60 MB .npy for 30k vectors of dimension 512.
      - using Colab: [`tg-bomze/Face-Depixelizer`][colab-app-equivalent]
        - caveat: the user has to log in with a Google account,
        - there is access to a free GPU.
