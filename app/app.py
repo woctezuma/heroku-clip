@@ -27,5 +27,5 @@ if uploaded_file is not None:
     logits_per_image, logits_per_text = model(image, text)
     probs = logits_per_image.softmax(dim=-1).cpu().detach().numpy()
 
-    st.write("Label probs:".format(probs))
+    st.write("Label probs: {}".format(probs))
 
