@@ -3,17 +3,8 @@ import torch
 import clip
 from PIL import Image
 
-def get_device():
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    return device
-
-@st.cache
-def cached_model():
-    model, preprocess = clip.load("ViT-B/32", device=get_device())
-    return model, preprocess
-
-device = get_device()
-model, preprocess = cached_model()
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model, preprocess = clip.load("ViT-B/32", device=device)
 
 st.title("Deploy OpenAI's CLIP on Heroku.")
 
