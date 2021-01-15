@@ -10,6 +10,22 @@ heroku create
 git push heroku main
 ```
 
+## Recommendation: use Colab instead
+
+I have noticed in logs that the app uses too much memory:
+
+> Process running mem=834M(162.9%)
+> Error R14 (Memory quota exceeded)
+
+Moreover, the app is slow because it does not have access to a GPU on Heroku.
+
+Therefore, if you do not need an app for a REST API
+
+If a [REST API][wiki-REST-API] is not required, I would recommend to use Colab instead:
+-   the notebook can be user-friendly,
+-   memory is less constrained,
+-   a GPU will be available for free.
+
 ## References
 
 -   Open AI's CLIP (Contrastive Language-Image Pre-Training):
@@ -33,4 +49,6 @@ git push heroku main
 [heroku-app-CLIP]: <https://github.com/woctezuma/heroku-clip>
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
+
+[wiki-REST-API]: <https://en.wikipedia.org/wiki/Representational_state_transfer>
 
