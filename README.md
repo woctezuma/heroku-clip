@@ -19,8 +19,6 @@ I have noticed in logs that the app uses too much memory:
 
 Moreover, the app is slow because it does not have access to a GPU on Heroku.
 
-Therefore, if you do not need an app for a REST API
-
 If a [REST API][wiki-REST-API] is not required, I would recommend to use Colab instead:
 -   the notebook can be user-friendly,
 -   memory is less constrained,
