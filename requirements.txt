@@ -1,0 +1,7 @@
+streamlit
+torch==1.7.1+cpu
+torchvision==0.8.2+cpu
+cudatoolkit==cpuonly
+ftfy
+regex
+tqdm
