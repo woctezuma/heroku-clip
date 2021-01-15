@@ -12,7 +12,7 @@ uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
 if uploaded_file is not None:
     input_image = Image.open(uploaded_file)    
-    st.image(image, caption="Input", use_column_width=True)
+    st.image(input_image, caption="Input", use_column_width=True)
     
     input_text = ["a diagram", "a dog", "a cat"]
     st.write('{}'.format(input_text))   
