@@ -24,8 +24,8 @@ if uploaded_file is not None:
         image_features = model.encode_image(image)
         text_features = model.encode_text(text)
     
-    logits_per_image, logits_per_text = model(image, text)
-    probs = logits_per_image.softmax(dim=-1).cpu().detach().numpy()
+        logits_per_image, logits_per_text = model(image, text)
+        probs = logits_per_image.softmax(dim=-1).cpu().numpy()
 
     st.write("Label probs: {}".format(probs))
 
