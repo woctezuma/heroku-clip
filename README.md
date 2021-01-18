@@ -34,6 +34,7 @@ If a [REST API][wiki-REST-API] is not required, I would recommend to use Colab i
     - [Radford, Alec, et al. *Learning Transferable Visual Models From Natural Language Supervision*. arXiv 2021.][openai-paper]
 -   My usage of CLIP:
     - [`steam-CLIP`][banner-repository-CLIP]: retrieve games with similar banners, using OpenAI's CLIP (resolution 224),
+    - [`heroku-flask-api`][my-flask-API]: serve the matching results through an API built with Flask on Heroku,
     - [`heroku-clip`][heroku-app-CLIP]: deploy CLIP on Heroku.
 -   Examples of interactive applications:
     - using Streamlit: [`ternaus/retinaface_demo`][streamlit-app]
@@ -52,7 +53,8 @@ If a [REST API][wiki-REST-API] is not required, I would recommend to use Colab i
      - using Colab: [`tg-bomze/Face-Depixelizer`][colab-app-equivalent]
        - caveat: the user has to log in with a Google account,
        - there is access to a free GPU.
-      
+
+[my-flask-API]: <https://github.com/woctezuma/heroku-flask-api>
 [streamlit-app]: <https://github.com/ternaus/retinaface_demo>
 [flask-app]: <https://github.com/matsui528/sis>
 [nodejs-app]: <https://github.com/rom1504/image_embeddings/tree/web>
