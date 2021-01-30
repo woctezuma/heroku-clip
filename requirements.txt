@@ -4,3 +4,4 @@ https://download.pytorch.org/whl/cpu/torchvision-0.8.2%2Bcpu-cp39-cp39-linux_x86
 ftfy
 regex
 tqdm
+git+https://github.com/openai/CLIP.git
