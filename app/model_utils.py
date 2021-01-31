@@ -37,7 +37,7 @@ def predict_class(input_image, topk=(1, 5)):
 
         pred = logits.topk(max(topk), 1, True, True)[1].t()
         if len(pred) == 1:
-            predicted_class = imagenet_classes[pred]
+            predicted_class = [imagenet_classes[pred]]
         else:
             predicted_class = [imagenet_classes[i] for i in pred]
 
