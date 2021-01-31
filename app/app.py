@@ -19,7 +19,7 @@ def imagenet_example(input_image):
     formatted_predictions = "\n".join(
         f"{i}) {label}" for i, label in enumerate(predicted_class, start=1)
     )
-    st.write("Top-5 ImageNet labels:\n{}\n".format(formatted_predictions))
+    st.text("ImageNet labels:\n{}\n".format(formatted_predictions))
 
     return
 
