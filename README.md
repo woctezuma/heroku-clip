@@ -32,7 +32,7 @@ First, to avoid using too much memory on Heroku:
 -   ensure you don't store many variables and models in the global scope, use functions!
 -   resize the input image, e.g. to 224x224 which is the resolution expected by CLIP anyway,
 
-Otherwise, you will notice in logs that the app uses too much memory, or worse crash because of it:
+Otherwise, you will notice in logs that the app uses too much memory, or worse, crashes because of it:
 
 > Process running mem=834M(162.9%)
 > Error R14 (Memory quota exceeded)
