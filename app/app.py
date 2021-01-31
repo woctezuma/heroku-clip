@@ -1,6 +1,7 @@
 import streamlit as st
 from model_utils import compute_probs, predict_class
 from image_utils import resize_image
+from PIL import Image as pil_image
 
 
 def minimal_example(input_image):
@@ -26,7 +27,8 @@ if __name__ == "__main__":
     uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
     if uploaded_file is not None:
-        input_image = resize_image(uploaded_file, target_size=[224, 224])
+        input_image = pil_image.open(uploaded_file)
+        input_image = resize_image(input_image, target_size=[224, 224])
         st.image(input_image, caption="Input", use_column_width=True)
 
         imagenet_example(input_image)
