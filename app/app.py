@@ -1,6 +1,6 @@
 import streamlit as st
-from .model_utils import compute_probs, predict_class
-from .image_utils import load_image
+from app.model_utils import compute_probs, predict_class
+from app.image_utils import load_image
 
 
 def minimal_example(input_image):

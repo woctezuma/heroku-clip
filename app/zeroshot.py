@@ -4,8 +4,8 @@ import json
 import torch
 import clip
 from tqdm import tqdm
-from .model_utils import get_device, get_model_and_preprocess
-from .imagenet_templates import load_imagenet_templates
+from app.model_utils import get_device, get_model_and_preprocess
+from app.imagenet_templates import load_imagenet_templates
 import numpy as np
 
 
