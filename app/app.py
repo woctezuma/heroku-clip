@@ -16,7 +16,10 @@ def minimal_example(input_image):
 
 def imagenet_example(input_image):
     predicted_class = predict_class(input_image)
-    st.write("Predictions: {}".format(predicted_class))
+    formatted_predictions = "\n".join(
+        f"{i}) {label}" for i, label in enumerate(predict_class, start=1)
+    )
+    st.write("Top-5 ImageNet labels:\n{}\n".format(formatted_predictions))
 
     return
 
@@ -29,6 +32,6 @@ if __name__ == "__main__":
     if uploaded_file is not None:
         input_image = pil_image.open(uploaded_file)
         input_image = resize_image(input_image, target_size=[224, 224])
-        st.image(input_image, caption="Input", use_column_width=True)
+        st.image(input_image, caption="Query image")
 
         imagenet_example(input_image)
