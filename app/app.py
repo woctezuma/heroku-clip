@@ -1,7 +1,7 @@
 import streamlit as st
 import torch
 import clip
-from PIL import Image
+from .image_utils import load_image
 
 
 def get_device():
@@ -36,7 +36,7 @@ st.title("Deploy OpenAI's CLIP on Heroku.")
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
 if uploaded_file is not None:
-    input_image = Image.open(uploaded_file)
+    input_image = load_image(uploaded_file, target_size=[224, 224])
     st.image(input_image, caption="Input", use_column_width=True)
 
     input_text = ["a diagram", "a dog", "a cat"]
