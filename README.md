@@ -27,6 +27,7 @@ Try [the app on Heroku][heroku-deployed-app]:
 -   a prediction of the top-5 ImageNet labels (out of 1000) will be displayed.
 
 If you want to try another image, make sure to first click on the red "X" to close the previous one:
+
 ![How to close the previous image][usage-image]
 
 ## Recommendations
