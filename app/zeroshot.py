@@ -46,3 +46,7 @@ def get_zeroshot_weights():
         zeroshot_weights = compute_zeroshot_weights()
         save_zeroshot_weights(zeroshot_weights)
     return zeroshot_weights
+
+
+if __name__ == "__main__":
+    zeroshot_weights = get_zeroshot_weights()
