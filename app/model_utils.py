@@ -1,6 +1,6 @@
 import torch
 import clip
-from app.zeroshot import load_imagenet_classes, load_zeroshot_weights
+from zeroshot import load_imagenet_classes, load_zeroshot_weights
 
 def get_device():
     device = "cuda" if torch.cuda.is_available() else "cpu"
