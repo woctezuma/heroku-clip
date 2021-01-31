@@ -1,5 +1,7 @@
 # Heroku CLIP
 
+![Illustration][cover-image]
+
 Deploy OpenAI's CLIP on Heroku.
 
 ## Usage
@@ -10,14 +12,32 @@ heroku create
 git push heroku main
 ```
 
-## Recommendation: use Colab instead
+If you have already deployed an app, then do not create it again after you have cloned the repo.
+Follow [this instruction][heroku-instruction] to add your remote instead.
+Typically, for myself:
+```
+heroku git:remote -a dry-taiga-80279
+```
 
-I have noticed in logs that the app uses too much memory:
+## Results
+
+Try [the app on Heroku][heroku-deployed-app]:
+-   upload an image,
+-   it will be resized to 224x224,
+-   a prediction of the top-5 ImageNet labels (out of 1000) will be displayed.
+
+## Recommendations
+
+First, to avoid using too much memory on Heroku:
+-   ensure you don't store many variables and models in the global scope, use functions!
+-   resize the input image, e.g. to 224x224 which is the resolution expected by CLIP anyway,
+
+Otherwise, you will notice in logs that the app uses too much memory, or worse crash because of it:
 
 > Process running mem=834M(162.9%)
 > Error R14 (Memory quota exceeded)
 
-Moreover, the app is slow because it does not have access to a GPU on Heroku.
+Second, the app is slow because it does not have access to a GPU on Heroku.
 
 If a [REST API][wiki-REST-API] is not required, I would recommend to use Colab instead:
 -   the notebook can be user-friendly,
@@ -69,6 +89,9 @@ If a [REST API][wiki-REST-API] is not required, I would recommend to use Colab i
 
 [banner-repository-CLIP]: <https://github.com/woctezuma/steam-CLIP>
 [heroku-app-CLIP]: <https://github.com/woctezuma/heroku-clip>
+[heroku-deployed-app]: <https://dry-taiga-80279.herokuapp.com/>
+[heroku-instruction]: <https://devcenter.heroku.com/articles/git#for-an-existing-heroku-app>
+[cover-image]: <https://github.com/woctezuma/heroku-clip/wiki/img/illustration.jpg>
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
 
