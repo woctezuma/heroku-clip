@@ -16,16 +16,21 @@ def get_interpolation_methods():
     return interpolation_methods
 
 
-def load_image(image_filename, target_size=None, interpolation="nearest"):
+def resize_image(img, target_size=None, interpolation="nearest"):
     interpolation_methods = get_interpolation_methods()
     resample = interpolation_methods[interpolation]
 
+    if target_size is not None:
+        width_height_tuple = (target_size[1], target_size[0])
+        if img.size != width_height_tuple:
+            img = img.resize(width_height_tuple, resample)
+
+    return img
+
+
+def load_image(image_filename, target_size=None, interpolation="nearest"):
     with open(image_filename, "rb") as f:
         img = pil_image.open(io.BytesIO(f.read()))
-
-        if target_size is not None:
-            width_height_tuple = (target_size[1], target_size[0])
-            if img.size != width_height_tuple:
-                img = img.resize(width_height_tuple, resample)
+        img = resize_image(img, target_size=target_size, interpolation=interpolation)
 
     return img
