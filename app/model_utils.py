@@ -33,7 +33,7 @@ def predict_class(input_image, topk=(1, 5)):
     with torch.no_grad():
         image_features = model.encode_image(image)
         image_features /= image_features.norm(dim=-1, keepdim=True)
-        logits = 100.0 * image_features @ zeroshot_weights
+        logits = 100.0 * image_features.float() @ zeroshot_weights.float()
 
         pred = logits.topk(max(topk), 1, True, True)[1].t()
         if len(pred) == 1:
