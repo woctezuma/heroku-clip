@@ -26,6 +26,9 @@ Try [the app on Heroku][heroku-deployed-app]:
 -   it will be resized to 224x224,
 -   a prediction of the top-5 ImageNet labels (out of 1000) will be displayed.
 
+If you want to try another image, make sure to first click on the red "X" to close the previous one:
+![How to close the previous image][usage-image]
+
 ## Recommendations
 
 First, to avoid using too much memory on Heroku:
@@ -92,6 +95,7 @@ If a [REST API][wiki-REST-API] is not required, I would recommend to use Colab i
 [heroku-deployed-app]: <https://dry-taiga-80279.herokuapp.com/>
 [heroku-instruction]: <https://devcenter.heroku.com/articles/git#for-an-existing-heroku-app>
 [cover-image]: <https://github.com/woctezuma/heroku-clip/wiki/img/illustration.jpg>
+[usage-image]: <https://github.com/woctezuma/heroku-clip/wiki/img/usage.png>
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
 
