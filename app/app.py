@@ -25,7 +25,7 @@ def imagenet_example(input_image):
 
 
 if __name__ == "__main__":
-    st.title("Deploy OpenAI's CLIP on Heroku.")
+    st.title("Predict top-5 ImageNet labels with OpenAI's CLIP.")
 
     uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
