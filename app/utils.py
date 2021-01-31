@@ -32,7 +32,9 @@ def get_zeroshot_weights_filename():
 
 def load_zeroshot_weights():
     zeroshot_weights_for_cpu = np.load(get_zeroshot_weights_filename())
-    zeroshot_weights_for_gpu = zeroshot_weights_for_cpu.to(get_device())
+    zeroshot_weights_for_gpu = torch.from_numpy(zeroshot_weights_for_cpu).to(
+        get_device()
+    )
     return zeroshot_weights_for_gpu
 
 
