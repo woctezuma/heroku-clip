@@ -1,7 +1,7 @@
 streamlit
 https://download.pytorch.org/whl/cpu/torch-1.7.1%2Bcpu-cp39-cp39-linux_x86_64.whl
 https://download.pytorch.org/whl/cpu/torchvision-0.8.2%2Bcpu-cp39-cp39-linux_x86_64.whl
-ftfy
+ftfy==5.9
 regex
 tqdm
 git+https://github.com/openai/CLIP.git
